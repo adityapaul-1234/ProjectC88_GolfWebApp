@@ -9,8 +9,8 @@ var hole_x=Math.round(hole_x_1/10)*10;
 console.log(hole_x,hole_y);
 
 
-block_image_width = 5;
-block_image_height = 5;
+block_image_width = 10;
+block_image_height = 10;
 
 function load_img(){
 	fabric.Image.fromURL("golf-h.png", function(Img){
