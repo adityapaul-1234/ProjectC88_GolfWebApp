@@ -2,8 +2,11 @@ var canvas = new fabric.Canvas('myCanvas');
 
 var ball_y=0;
 var ball_x=0;
-var hole_y=Math.floor(Math.random() * 100);
-var hole_x=Math.floor(Math.random() * 1000);
+var hole_y_1=Math.floor(Math.random() * 100);
+var hole_x_1=Math.floor(Math.random() * 1000);
+var hole_y=Math.round(hole_y_1/10)*10;
+var hole_x=Math.round(hole_x_1/10)*10;
+console.log(hole_x,hole_y);
 
 
 block_image_width = 5;
@@ -40,9 +43,7 @@ window.addEventListener("keydown", my_keydown);
 
 function my_keydown(e){
 	keyPressed = e.keyCode;
-	console.log(keyPressed);
 	if ((ball_x==hole_x)&&(ball_y==hole_y)){
-		console.log("Success");
 		canvas.remove(ball_obj);
 		document.getElementById("hd3").innerHTML = "You have hit the goal!";
 		document.getElementById("myCanvas").style.borderColor="red";
